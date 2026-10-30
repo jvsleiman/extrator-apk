@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -39,3 +39,13 @@ jobs:
         with:
           name: ExtratorAPK-unsigned
           path: out/
+
+      - name: Publicar no branch builds
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout -q --orphan builds
+          git rm -rf -q --cached .
+          git add -f out/
+          git commit -q -m "APK de ${GITHUB_SHA::7} (build ${GITHUB_RUN_NUMBER})"
+          git push -f origin builds

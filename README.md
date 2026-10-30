@@ -10,7 +10,7 @@ Na primeira extração o app pede uma pasta de destino; dá para trocar no menu 
 
 ## Build
 
-O GitHub Actions (`.github/workflows/build.yml`) compila a cada push em `main` e guarda como artifact do run o APK **sem assinatura** (`ExtratorAPK-unsigned.apk`) e o `apksigner.jar` do Android SDK.
+O GitHub Actions (`.github/workflows/build.yml`) compila a cada push em `main` e publica (no artifact do run e no branch `builds`, pasta `out/`) o APK **sem assinatura** (`ExtratorAPK-unsigned.apk`) e o `apksigner.jar` do Android SDK.
 
 A keystore não fica no repositório. Para assinar:
 
