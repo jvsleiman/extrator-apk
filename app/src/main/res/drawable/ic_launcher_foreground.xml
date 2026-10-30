@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- seta -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M50,28h8v18h8l-12,13l-12,-13h8z" />
+    <!-- caixa -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M34,56h10l10,10l10,-10h10v22a2,2 0,0 1,-2 2h-36a2,2 0,0 1,-2 -2z" />
+    <path android:fillColor="#1E6B52"
+        android:pathData="M42,70h24v3h-24z" />
+</vector>
